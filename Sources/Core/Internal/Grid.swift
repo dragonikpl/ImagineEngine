@@ -78,6 +78,10 @@ internal final class Grid: Activatable {
 
         block.gridTiles = []
     }
+    
+    func add(_ node: Node<CALayer>, in scene: Scene) {
+        node.scene = scene
+    }
 
     func add(_ label: Label, in scene: Scene) {
         guard labels.insert(label).inserted else {

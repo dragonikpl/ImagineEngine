@@ -10,7 +10,7 @@ open class Node<Layer: CALayer>: AnyNode {
     /// The rectangle that the node currently occupies within its scene.
     public var rect: Rect { return layer.frame }
 
-    internal let layer: Layer
+    public let layer: Layer
     internal var gridTiles = Set<Grid.Tile>()
 
     public init(layer: Layer) {

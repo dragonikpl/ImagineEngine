@@ -109,6 +109,12 @@ open class Scene: Pluggable, Activatable {
         layer.addSublayer(actor.layer)
         events.actorAdded.trigger(with: actor)
     }
+    
+    /// Add a node to the scene
+    public func add(_ node: Node<CALayer>) {
+        grid.add(node, in: self)
+        layer.addSublayer(node.layer)
+    }
 
     /// Add a block to the scene
     public func add(_ block: Block) {
